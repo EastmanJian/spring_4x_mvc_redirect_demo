@@ -18,4 +18,10 @@ public class WebController {
     public String finalPage() {
         return "final";
     }
+
+    @RequestMapping(value = "/staticPage", method = RequestMethod.GET)
+    public String staticPage() {
+        return "redirect:/staticPages/static.html";
+    }
+
 }

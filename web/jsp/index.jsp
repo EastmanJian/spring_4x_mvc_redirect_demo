@@ -2,7 +2,7 @@
 <%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
 <html>
 <head>
-    <title>Spring Page Redirection</title>
+    <title>Spring Page Redirection and Static Pages</title>
 </head>
 
 <body>
@@ -29,8 +29,20 @@
         </tr>
     </table>
 </form:form>
-<br/>
 <a href="./redirect">Redirect Page</a>
+
+<hr/>
+<h2>Static Pages</h2>
+<p><pre>
+    Spring MVC Framework can access static pages along with dynamic pages with the help of &lt;mvc:resources&gt; tag in Spring Config.
+
+    Click the links below to visit some static pages or resources. Also vew the Spring Config to see the configuration.
+</pre></p>
+
+<a href="./staticPage">Link to a static html page</a><br/> <!-- This link uses the RequestMapping in controller -->
+<a href="./staticPages/web.xml">View web.xml</a><br/>      <!-- This link uses mvc:resources mapping in the Spring Config directly -->
+<a href="./staticPages/dispatcher-servlet.xml">View Spring Config</a> <!-- This link uses mvc:resources mapping in the Spring Config directly -->
+
 </body>
 
 </html>
